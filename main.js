@@ -54,7 +54,7 @@ function createPassword(lower, upper, number, symbol, length) {
     // loop over length call generator function for each type
     // add final password to the password variable and return it
 
-    var createPassword = ''
+    var makePassword = ''
 
     var checkedCount = lower + upper + number + symbol
 
@@ -73,11 +73,11 @@ function createPassword(lower, upper, number, symbol, length) {
             var optionName = Object.keys(type)[0]
             //console.log(optionName)
 
-            createPassword += options[optionName]();
+            makePassword += options[optionName]();
         });
     }
 
-    var fullPassword = createPassword.slice(0, length)
+    var fullPassword = makePassword.slice(0, length)
     return fullPassword
 }
 
